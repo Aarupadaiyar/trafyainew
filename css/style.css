@@ -733,78 +733,59 @@ section:not(.hero):not(.funding){padding:68px 0}
    ========================================================================== */
 .success{background:var(--bg-alt)}
 
-/* Circular alumni showcase — vanilla port of a React/GSAP "circular split
-   roll" component: two columns (names / portraits) drift around independent
-   circles as the section is scrubbed by scroll, each side coming into focus
-   opposite the other. Pinned scroll effect only runs >=1025px and only
-   without prefers-reduced-motion; every other case (including the initial
-   paint before JS runs) shows the plain card grid below instead, so there's
-   never an empty pinned box on screen. */
-.circular-alumni{position:relative;margin-top:32px}
+.success__inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.success__left{max-width:420px}
+.success__left .eyebrow{margin-bottom:10px}
+.success__left .section-title{margin-bottom:14px}
+.success__subhead{color:var(--text-dim);font-size:15.5px;line-height:1.6}
 
-.circular-alumni__pin{
-  display:none;position:relative;height:100vh;overflow:hidden;background:#000;
+/* Alumni marquee — vanilla port of Magic UI's "Marquee" (vertical,
+   dual-column, pause-on-hover): two plain-CSS columns of duplicated cards,
+   one scrolling up and one down, looping seamlessly because each track is
+   exactly two identical copies of its row (translateY(-50%) = one copy's
+   height, whatever that height happens to be). */
+.alumni-marquee{
+  position:relative;height:480px;display:flex;gap:16px;
+  justify-content:flex-end;
 }
-@media (min-width:1025px){
-  .circular-alumni__pin{display:block}
-  .circular-alumni__grid{display:none}
+.alumni-marquee__col{
+  position:relative;overflow:hidden;flex:1;max-width:230px;
+  -webkit-mask-image:linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
+  mask-image:linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
 }
-.circular-alumni.is-static .circular-alumni__pin{display:none!important}
-.circular-alumni.is-static .circular-alumni__grid{display:grid!important}
+.alumni-marquee__track{
+  display:flex;flex-direction:column;gap:14px;
+  animation:alumni-marquee-up 26s linear infinite;
+}
+.alumni-marquee__col--reverse .alumni-marquee__track{animation-name:alumni-marquee-down}
+.alumni-marquee__col:hover .alumni-marquee__track,
+.alumni-marquee.is-paused .alumni-marquee__track{animation-play-state:paused}
+@keyframes alumni-marquee-up{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+@keyframes alumni-marquee-down{from{transform:translateY(-50%)}to{transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){ .alumni-marquee__track{animation:none} }
 
-.circular-alumni__col{
-  position:absolute;top:0;height:100%;width:50%;
-  display:flex;align-items:center;justify-content:center;
+.alumni-marquee__card{
+  padding:14px;border-radius:14px;border:1px solid var(--border);background:var(--surface);
+  transition:background .25s var(--ease), border-color .25s var(--ease);
 }
-.circular-alumni__col--left{left:0}
-.circular-alumni__col--right{right:0}
-.circular-alumni__orbit{position:relative;width:100%;height:78vh}
-
-.circular-alumni__name{
-  position:absolute;left:50%;top:50%;width:100%;
-  transform:translate(-50%,-50%);
-  text-align:center;white-space:nowrap;opacity:0;pointer-events:none;
-  will-change:transform,opacity;
-}
-.circular-alumni__name-text{
-  display:block;font-family:var(--ff-heading);font-weight:800;
-  font-size:clamp(22px,2.6vw,40px);color:#fff;letter-spacing:-.02em;
-}
-.circular-alumni__name-role{
-  display:block;margin-top:6px;font-size:13px;color:var(--text-dim);font-weight:500;
+.alumni-marquee__card:hover{background:var(--surface-2);border-color:var(--border-strong)}
+.alumni-marquee__card-head{display:flex;align-items:center;gap:10px}
+.alumni-marquee__card-avatar{width:34px;height:34px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.alumni-marquee__card-name{font-family:var(--ff-heading);font-size:13px;font-weight:700;color:var(--text)}
+.alumni-marquee__card-role{font-size:11px;color:var(--text-faint);margin-top:1px}
+.alumni-marquee__card-quote{
+  margin-top:10px;font-size:12.5px;color:var(--text-dim);line-height:1.5;
+  display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;
 }
 
-.circular-alumni__card{
-  position:absolute;left:50%;top:50%;
-  width:var(--circ-card-w,170px);height:var(--circ-card-h,190px);
-  margin-left:calc(var(--circ-card-w,170px) * -0.5);
-  margin-top:calc(var(--circ-card-h,190px) * -0.5);
-  opacity:0;border-radius:16px;overflow:hidden;background:#111;
-  box-shadow:0 24px 50px -18px rgba(0,0,0,.7);will-change:transform,opacity;
+@media (max-width:900px){
+  .success__inner{grid-template-columns:1fr;gap:28px}
+  .success__left{max-width:none;text-align:center}
+  .alumni-marquee{justify-content:center;max-width:480px;margin:0 auto}
+  .alumni-marquee__col{max-width:none}
 }
-.circular-alumni__card img{width:100%;height:100%;object-fit:cover;display:block}
-
-/* Static fallback grid — mobile/tablet default, and the reduced-motion /
-   no-JS fallback at any width. */
-.circular-alumni__grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
-  max-width:1100px;margin:0 auto;padding:0 20px;
-}
-.circular-alumni__grid-card{
-  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);
-  padding:16px;
-}
-.circular-alumni__grid-media{aspect-ratio:1;border-radius:12px;overflow:hidden;margin-bottom:14px}
-.circular-alumni__grid-media img{width:100%;height:100%;object-fit:cover;display:block}
-.circular-alumni__grid-quote{
-  font-size:13.5px;color:var(--text-dim);line-height:1.5;margin-bottom:10px;
-  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
-}
-.circular-alumni__grid-byline{font-size:12.5px;color:var(--text-faint)}
-.circular-alumni__grid-byline strong{color:var(--text);font-weight:700}
-
-@media (max-width:640px){
-  .circular-alumni__grid{grid-template-columns:repeat(2,1fr);gap:14px;padding:0 16px}
+@media (max-width:480px){
+  .alumni-marquee{height:400px}
 }
 
 .avatar-circles{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:44px}

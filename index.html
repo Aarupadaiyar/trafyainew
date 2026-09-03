@@ -390,22 +390,17 @@
 
 <!-- ============ 08. HEAR FROM YOUR ALUMNI ============ -->
 <section class="success" id="success" aria-label="Hear from your alumni">
-  <div class="section-inner">
-    <p class="eyebrow eyebrow--center">Cohort &apos;25</p>
-    <h2 class="section-title section-title--center reveal">Hear From Your Alumni</h2>
-
-  </div>
-
-  <div class="circular-alumni" id="circularAlumni">
-    <div class="circular-alumni__pin" id="circularAlumniPin" aria-hidden="true">
-      <div class="circular-alumni__col circular-alumni__col--left">
-        <div class="circular-alumni__orbit" id="circularAlumniNames"></div>
-      </div>
-      <div class="circular-alumni__col circular-alumni__col--right">
-        <div class="circular-alumni__orbit" id="circularAlumniPhotos"></div>
-      </div>
+  <div class="section-inner success__inner">
+    <div class="success__left reveal">
+      <p class="eyebrow">Cohort &apos;25</p>
+      <h2 class="section-title">Hear From Your Alumni</h2>
+      <p class="success__subhead">Real builders, real outcomes. Here&apos;s what Cohort &apos;25 alumni have to say about shipping, learning and growing with Trafy.</p>
     </div>
-    <div class="circular-alumni__grid" id="circularAlumniGrid" aria-label="Alumni stories"></div>
+
+    <div class="alumni-marquee" id="alumniMarquee" aria-label="Alumni stories">
+      <div class="alumni-marquee__col" id="alumniMarqueeCol1"></div>
+      <div class="alumni-marquee__col alumni-marquee__col--reverse" id="alumniMarqueeCol2"></div>
+    </div>
   </div>
 
   <div class="section-inner">
@@ -561,7 +556,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/alumni-circular.js"></script>
+<script src="js/alumni-marquee.js"></script>
 <script type="module" src="js/molten-metal-init.js"></script>
 </body>
 </html>
