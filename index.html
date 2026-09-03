@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trafy: Learn by Building</title>
+<meta name="description" content="Build an AI SaaS product along with founders. Learn, build and launch with Trafy Cohort '26.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/img/favicon-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#hero" class="nav__logo">
+      <span class="nav__logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12.5L10 17.5L19 6.5" stroke="url(#navGrad)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="navGrad" x1="5" y1="6.5" x2="19" y2="17.5" gradientUnits="userSpaceOnUse"><stop stop-color="#8B7CFF"/><stop offset="1" stop-color="#4F8CFF"/></linearGradient></defs></svg>
+      </span>
+      <img src="assets/img/trafy-logo.png" alt="Trafy" class="nav__logo-img">
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#seek-funding">Cohort</a>
+      <a href="#why-trafy">Why Trafy</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#success">Success Stories</a>
+    </nav>
+
+    <a href="#apply" class="btn btn--primary btn--sm nav__cta">Apply to Cohort &apos;26</a>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav__mobile" id="navMobile">
+    <a href="#seek-funding">Cohort</a>
+    <a href="#why-trafy">Why Trafy</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#success">Success Stories</a>
+    <a href="#apply" class="btn btn--primary btn--sm">Apply to Cohort &apos;26</a>
+  </div>
+</header>
+
+<div class="sticky-cta" id="stickyCta">
+  <span class="sticky-cta__text"><strong>Cohort &apos;26 is open</strong><span>31/40 seats · Closes Sept 30</span></span>
+  <a href="#apply" class="btn btn--primary btn--md">Apply Now</a>
+</div>
+
+<main>
+
+<!-- ============ EXPAND SEQUENCE: HERO -> SEEK FUNDING ============ -->
+<div class="expand-pin" id="expandPin">
+
+    <!-- 01. HERO -->
+    <section class="hero" id="hero" aria-label="Hero">
+      <div class="hero__bg">
+        <video autoplay muted loop playsinline preload="auto" poster="assets/img/iit-madras-hero-poster.webp" aria-hidden="true">
+          <source src="assets/img/iit-madras-hero.webm" type="video/webm">
+          <source src="assets/img/iit-madras-hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero__scrim"></div>
+        <div class="hero__glow"></div>
+      </div>
+
+      <div class="section-inner hero__grid">
+        <div class="hero__left" id="heroLeft">
+          <p class="eyebrow eyebrow--light">Trafy Cohort &apos;26 · Applications Open</p>
+          <h1 class="hero__title">Learn by<br>Building</h1>
+          <p class="hero__subhead">Build an <span class="hl hl--highlight hl--violet">AI SaaS product</span> along with founders. Go from a blank canvas to a shipped, revenue-ready product in weeks, guided by operators who've built and sold real companies.</p>
+          <div class="hero__actions">
+            <a href="#apply" class="btn btn--primary btn--lg">Apply to Cohort <span class="hl hl--underline">&apos;26</span></a>
+            <a href="#timeline" class="btn btn--ghost btn--lg">See how it works</a>
+          </div>
+          <p class="hero__urgency"><span class="hero__urgency-dot" aria-hidden="true"></span> <strong>31/40</strong> seats filled · Applications close <strong>Sept 30</strong></p>
+          <div class="hero__meta">
+            <div class="hero__meta-item"><strong>4</strong><span>Weeks, full immersion</span></div>
+            <div class="hero__meta-item"><strong>7+</strong><span>Startups incubated</span></div>
+            <div class="hero__meta-item"><strong>₹1Cr+</strong><span>Grants allocated</span></div>
+          </div>
+        </div>
+
+        <div class="hero__right" id="heroRight">
+          <p class="hero__strip-label">Trafy Pitch Day</p>
+          <div class="hero__strip" id="heroStrip">
+            <div class="hero__thumb hero__thumb--active" data-thumb="1"><img src="assets/img/pitch-1.webp" alt="Trafy founders presenting the AI Copilot at Pitch Day" decoding="async"></div>
+          </div>
+          <p class="hero__scroll-cue">Scroll to see what it unlocks<span class="hero__scroll-arrow">↓</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- morph image, absolutely positioned, animated via JS -->
+    <div class="morph-image" id="morphImage">
+      <img src="assets/img/pitch-1.webp" alt="" decoding="async">
+    </div>
+
+    <!-- 02. SEEK FUNDING / SCALE / ACQUIRE -->
+    <section class="funding" id="seek-funding" aria-label="Cohort that helps you seek funding, scale and acquire">
+      <div class="funding__bg" id="moltenMetalBg" aria-hidden="true"></div>
+      <div class="funding__scrim" aria-hidden="true"></div>
+      <div class="section-inner funding__grid">
+        <div class="funding__left" aria-hidden="true">
+          <img src="assets/img/pitch-1.webp" alt="" loading="lazy" decoding="async">
+        </div>
+
+        <div class="funding__right" id="fundingRight">
+          <p class="eyebrow">A cohort that helps you</p>
+          <h2 class="funding__title">Seek <span class="accent-word accent-word--gold">funding</span>, <span class="accent-word accent-word--green">scale</span> and <span class="accent-word accent-word--orange">acquire</span>.</h2>
+          <p class="funding__copy">Beyond the classroom, Trafy plugs you into the ecosystem that turns a working prototype into a fundable company, with investor intros, growth playbooks and M&amp;A pathways included.</p>
+        </div>
+      </div>
+    </section>
+
+</div>
+
+<!-- ============ 03. WHY TRAFY COHORT 26 ============ -->
+<section class="why" id="why-trafy" aria-label="Why Trafy Cohort '26">
+  <div class="section-inner">
+    <p class="eyebrow eyebrow--center">The outcomes</p>
+    <h2 class="section-title section-title--center reveal">Why Trafy Cohort &apos;26?</h2>
+
+    <div class="bento-wrap">
+      <span class="bento-ribbon bento-ribbon--green" aria-hidden="true"></span>
+      <span class="bento-ribbon bento-ribbon--gold" aria-hidden="true"></span>
+      <span class="bento-ribbon bento-ribbon--orange" aria-hidden="true"></span>
+
+      <div class="bento reveal-group">
+        <div class="bento__cell bento__cell--grants reveal">
+          <span class="bento__value">₹1 Cr+</span>
+          <span class="bento__label"><strong>Grants Given</strong><small>to student startups by Trafy</small></span>
+          <div class="bento__photo">
+            <img src="assets/img/bento-grants.webp" alt="A ₹1,00,00,000 grant cheque presented at Trafy AI Cohort '25" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="bento__cell bento__cell--vc reveal">
+          <span class="bento__value">25+</span>
+          <span class="bento__label"><strong>VC Meetings</strong><small>for selected startups</small></span>
+          <div class="bento__chart bento__chart--bars" aria-hidden="true">
+            <svg viewBox="0 0 200 72" preserveAspectRatio="none">
+              <line x1="0" y1="68" x2="200" y2="68" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+              <rect x="8" y="52" width="36" height="16" rx="5" fill="url(#gradBlue)" opacity=".5"/>
+              <rect x="58" y="36" width="36" height="32" rx="5" fill="url(#gradBlue)" opacity=".7"/>
+              <rect x="108" y="20" width="36" height="48" rx="5" fill="url(#gradBlue)" opacity=".9"/>
+              <rect x="158" y="6" width="36" height="62" rx="5" fill="url(#gradBlue)"/>
+              <defs><linearGradient id="gradBlue" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#4F8CFF"/><stop offset="1" stop-color="#4F8CFF" stop-opacity=".35"/></linearGradient></defs>
+            </svg>
+            <div class="bento__chart-labels"><span>Wk1</span><span>Wk2</span><span>Wk3</span><span>Wk4</span></div>
+          </div>
+        </div>
+        <div class="bento__cell bento__cell--students reveal">
+          <span class="bento__value">17+</span>
+          <span class="bento__label"><strong>Students Placed</strong><small>in international companies</small></span>
+          <div class="bento__chart bento__chart--donut" aria-hidden="true">
+            <svg viewBox="0 0 80 80">
+              <circle cx="40" cy="40" r="30" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="11"/>
+              <circle cx="40" cy="40" r="30" fill="none" stroke="#2FC28C" stroke-width="11" stroke-dasharray="75.4 188.5" stroke-dashoffset="0" stroke-linecap="round" transform="rotate(-90 40 40)"/>
+              <circle cx="40" cy="40" r="30" fill="none" stroke="#4F8CFF" stroke-width="11" stroke-dasharray="47.1 188.5" stroke-dashoffset="-75.4" stroke-linecap="round" transform="rotate(-90 40 40)"/>
+              <circle cx="40" cy="40" r="30" fill="none" stroke="#E3B94E" stroke-width="11" stroke-dasharray="66 188.5" stroke-dashoffset="-122.5" stroke-linecap="round" transform="rotate(-90 40 40)"/>
+            </svg>
+            <div class="bento__chart-legend">
+              <span><i style="background:#2FC28C"></i>APAC</span>
+              <span><i style="background:#4F8CFF"></i>EU</span>
+              <span><i style="background:#E3B94E"></i>US</span>
+            </div>
+          </div>
+        </div>
+        <div class="bento__cell bento__cell--startups reveal">
+          <span class="bento__value">7+</span>
+          <span class="bento__label"><strong>Startups Incubated</strong><small>straight out of the cohort</small></span>
+          <div class="bento__photo">
+            <img src="assets/img/bento-startups.webp" alt="Trafy AI Incubation — builders reviewing an idea-to-impact roadmap" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="bento__cell bento__cell--ctc reveal">
+          <span class="bento__value">₹21.73L</span>
+          <span class="bento__label"><strong>Average CTC</strong><small>across Cohort &apos;25 placements</small></span>
+          <div class="bento__photo">
+            <img src="assets/img/bento-ctc.webp" alt="Trafy builders going from idea to impact: build, iterate, grow" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04. LATEST NEWS & BLOG ============ -->
+<section class="news" id="news" aria-label="Latest articles">
+  <div class="section-inner">
+    <div class="news__head reveal">
+      <div class="news__tabs">
+        <span class="news__tab news__tab--active">Articles</span>
+      </div>
+      <div class="news__head-actions">
+        <a href="blog.html" class="link-arrow">View all <span>→</span></a>
+        <div class="news__nav" aria-hidden="true">
+          <button type="button" class="news__nav-btn" id="newsPrev" aria-label="Scroll articles left">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button type="button" class="news__nav-btn" id="newsNext" aria-label="Scroll articles right">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M8 4L14 10L8 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="news__grid reveal-group" id="newsGrid">
+      <a class="news__card reveal" href="blog.html#learn-by-building-cohort">
+        <div class="news__card-media">
+          <img src="assets/img/news-feature.webp" alt="Trafy launches world's first Learn by Building cohort, via Business Networks" loading="lazy" decoding="async">
+        </div>
+        <div class="news__card-body">
+          <div class="news__card-tags">
+            <span class="news__card-tag news__card-tag--dark">Press</span>
+            <span class="news__card-tag">4 min read</span>
+          </div>
+          <h3>Trafy launches world&apos;s first &quot;Learn by Building&quot; cohort for AI engineers</h3>
+          <span class="news__card-link">Read article <span>↗</span></span>
+        </div>
+      </a>
+
+      <a class="news__card reveal" href="blog.html#week-3-mvp-sprint">
+        <div class="news__card-media">
+          <img src="assets/img/founders-meet.webp" alt="Trafy builders working through Week 3 of the cohort" loading="lazy" decoding="async">
+        </div>
+        <div class="news__card-body">
+          <div class="news__card-tags">
+            <span class="news__card-tag news__card-tag--dark">Journal</span>
+            <span class="news__card-tag">3 min read</span>
+          </div>
+          <h3>Inside Week 3: how five teams shipped MVPs in four days</h3>
+          <span class="news__card-link">Read article <span>↗</span></span>
+        </div>
+      </a>
+
+      <a class="news__card reveal" href="blog.html#cohort25-funding-recap">
+        <div class="news__card-media">
+          <img src="assets/img/pitch-2.webp" alt="Trafy founders pitching at Cohort 25 Pitch Day" loading="lazy" decoding="async">
+        </div>
+        <div class="news__card-body">
+          <div class="news__card-tags">
+            <span class="news__card-tag news__card-tag--dark">Journal</span>
+            <span class="news__card-tag">5 min read</span>
+          </div>
+          <h3>From prototype to funded startup: what Cohort &apos;25 taught us about traction</h3>
+          <span class="news__card-link">Read article <span>↗</span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05. OUR NEXT COHORT ============ -->
+<section class="cohort" id="next-cohort" aria-label="Our next cohort">
+  <div class="section-inner">
+    <p class="eyebrow eyebrow--center">Enroll now</p>
+    <h2 class="section-title section-title--center reveal">Our Next Cohort</h2>
+
+    <div class="cohort-card reveal">
+      <div class="cohort-card__media">
+        <img src="assets/img/cohort26-banner.webp" alt="Trafy Cohort '26 Experience: collaborate with like minded founders and learn AI by building" loading="lazy" decoding="async">
+      </div>
+
+      <div class="cohort-card__body">
+        <h3 class="cohort-card__title">Trafy AI Cohort <strong>&apos;26</strong></h3>
+        <p class="cohort-card__copy">A 4-week, builder-led program to ship a real AI SaaS product, including mentor pairing, Pitch Day and a track for either startup funding or a job offer.</p>
+
+        <div class="cohort-card__grid">
+          <div class="cohort-card__item">
+            <span class="cohort-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5L2 9.5 12 14l10-4.5L12 5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 11.8V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <h4>Format</h4>
+              <p>Hybrid: in-person sprints + online build weeks</p>
+            </div>
+          </div>
+          <div class="cohort-card__item">
+            <span class="cohort-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20V9l8-5 8 5v11" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 20v-6h6v6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+            <div>
+              <h4>Eligibility</h4>
+              <p>Students, early founders &amp; career-switchers</p>
+            </div>
+          </div>
+          <div class="cohort-card__item">
+            <span class="cohort-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <h4>Duration</h4>
+              <p>4 weeks, full immersion</p>
+            </div>
+          </div>
+          <div class="cohort-card__item">
+            <span class="cohort-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h12M6 21h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7 3c0 4 3 5 5 6-2 1-5 2-5 6h10c0-4-3-5-5-6 2-1 5-2 5-6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+            <div>
+              <h4>Deadline</h4>
+              <p>Applications close Sept 30, 2026</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cohort-card__cta">
+          <a href="#apply" class="btn btn--primary btn--md">Enroll Now <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06. LEARN PRACTICALLY BY BUILDING ============ -->
+<section class="practice" id="practice" aria-label="Learn practically by building">
+  <div class="practice__media reveal" aria-hidden="true">
+    <img src="assets/img/challenge-target.webp" alt="" loading="lazy" decoding="async">
+    <div class="practice__media-scrim"></div>
+  </div>
+
+  <div class="section-inner practice__inner">
+    <div class="practice__left reveal">
+      <p class="eyebrow">Learn by doing</p>
+      <h2 class="practice__title">Build a real business with your peers, then start your <span class="accent-word accent-word--violet">Founder&apos;s Journey</span></h2>
+      <p class="practice__copy">No case studies, no theory-only lectures. Ship a live product, get real users, hit a <strong>$1,000-in-30-days</strong> revenue target with a small team of builders, and learn to raise a funding round along the way.</p>
+      <a href="#apply" class="btn btn--outline btn--md">Explore Startup Funding</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07. PROGRAM TIMELINE ============ -->
+<section class="timeline" id="timeline" aria-label="Program timeline">
+  <div class="section-inner">
+    <p class="eyebrow eyebrow--center">Your path</p>
+    <h2 class="section-title section-title--center reveal">Program Timeline</h2>
+    <p class="timeline__intro reveal">Everyone starts in the same room. Where you go from there is up to you.</p>
+
+    <div class="timeline__diagram reveal">
+      <div class="timeline__common">
+        <div class="timeline__common-card">
+          <h3 class="timeline__common-title">
+            <span class="timeline__node-index">Week 1 &middot; Common start</span>
+            Learn to build AI products &amp; AI agents
+          </h3>
+          <ol class="timeline__common-steps">
+            <li><span class="timeline__common-num">1</span>Learn from scratch</li>
+            <li><span class="timeline__common-num">2</span>Build a project</li>
+            <li><span class="timeline__common-num">3</span>Automate workflows using no-code tools</li>
+            <li><span class="timeline__common-num">4</span>Build AI agents</li>
+          </ol>
+        </div>
+      </div>
+
+      <svg class="timeline__fork" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M200,0 C200,26 200,26 100,34 C55,39 55,39 55,60" fill="none"/>
+        <path d="M200,0 C200,26 200,26 300,34 C345,39 345,39 345,60" fill="none"/>
+      </svg>
+
+      <div class="timeline__tracks">
+        <div class="timeline__track timeline__track--startup">
+          <h3 class="timeline__track-title">
+            <span class="timeline__track-dot timeline__track-dot--startup"></span>
+            Startup Path
+          </h3>
+          <ol class="timeline__steps">
+            <li class="timeline__step">Have a startup idea</li>
+            <li class="timeline__step">Pitch your startup idea</li>
+            <li class="timeline__step">If selected</li>
+            <li class="timeline__step timeline__step--outcome">Get funding →</li>
+          </ol>
+        </div>
+
+        <div class="timeline__track timeline__track--employ">
+          <h3 class="timeline__track-title">
+            <span class="timeline__track-dot timeline__track-dot--employ"></span>
+            Employability Path
+          </h3>
+          <ol class="timeline__steps">
+            <li class="timeline__step">Take the Employability Test</li>
+            <li class="timeline__step">Find your Employability Index</li>
+            <li class="timeline__step">Build your brand presence</li>
+            <li class="timeline__step timeline__step--outcome">Get hired &amp; earn in lakhs →</li>
+          </ol>
+          <a href="#" class="link-arrow timeline__learn-more">Learn more about Employability Index <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08. HEAR FROM YOUR ALUMNI ============ -->
+<section class="success" id="success" aria-label="Hear from your alumni">
+  <div class="section-inner">
+    <p class="eyebrow eyebrow--center">Cohort &apos;25</p>
+    <h2 class="section-title section-title--center reveal">Hear From Your Alumni</h2>
+
+  </div>
+
+  <div class="circular-alumni" id="circularAlumni">
+    <div class="circular-alumni__pin" id="circularAlumniPin" aria-hidden="true">
+      <div class="circular-alumni__col circular-alumni__col--left">
+        <div class="circular-alumni__orbit" id="circularAlumniNames"></div>
+      </div>
+      <div class="circular-alumni__col circular-alumni__col--right">
+        <div class="circular-alumni__orbit" id="circularAlumniPhotos"></div>
+      </div>
+    </div>
+    <div class="circular-alumni__grid" id="circularAlumniGrid" aria-label="Alumni stories"></div>
+  </div>
+
+  <div class="section-inner">
+    <div class="avatar-circles reveal">
+      <div class="avatar-circles__group">
+        <span class="avatar-circles__avatar" style="--av:#7C6FF5">AS</span>
+        <span class="avatar-circles__avatar" style="--av:#4F8CFF">RV</span>
+        <span class="avatar-circles__avatar" style="--av:#2FC28C">AK</span>
+        <span class="avatar-circles__avatar" style="--av:#F5A623">KB</span>
+        <span class="avatar-circles__avatar" style="--av:#E1548D">SJ</span>
+        <span class="avatar-circles__avatar avatar-circles__avatar--more">+94</span>
+      </div>
+      <p class="avatar-circles__label">Joined by 99+ builders across Cohort &apos;25</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09. IIT MADRAS CTA ============ -->
+<section class="iitm" id="iit-madras" aria-label="Graduate from IIT Madras">
+  <div class="section-inner iitm__grid">
+    <div class="iitm__left reveal">
+      <p class="eyebrow eyebrow--light">In collaboration with IIT Madras</p>
+      <h2 class="iitm__title">Graduate from IIT Madras</h2>
+      <p class="iitm__copy">Complete Trafy Cohort &apos;26 and earn a certification backed by IIT Madras, recognised credentials that travel with you into any funding room or interview.</p>
+      <a href="#apply" class="btn btn--primary btn--lg">Apply Now →</a>
+    </div>
+
+    <div class="iitm__right reveal">
+      <div class="iitm__visual">
+        <img src="assets/img/iit-madras.webp" alt="Indian Institute of Technology Madras campus entrance" loading="lazy" decoding="async">
+        <div class="iitm__scrim" aria-hidden="true"></div>
+        <div class="iitm__badge">
+          <span class="iitm__badge-mark">IIT</span>
+          <span>Madras<br>Certified Program</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. APPLY ============ -->
+<section class="apply" id="apply" aria-label="Apply to Trafy Cohort '26">
+  <div class="section-inner apply__grid">
+    <div class="apply__left reveal">
+      <p class="eyebrow eyebrow--light">Cohort &apos;26 · Applications open</p>
+      <h2 class="apply__title">Apply to Trafy Cohort &apos;26</h2>
+      <p class="apply__copy">Ten minutes to apply. It's free, there's no obligation, and you'll hear back within 48 hours, whether you're chasing a startup or a job.</p>
+
+      <div class="apply__urgency">
+        <div class="apply__urgency-bar"><span style="width:78%"></span></div>
+        <p><strong>31 / 40</strong> seats filled &nbsp;·&nbsp; Applications close <strong>Sept 30, 2026</strong></p>
+      </div>
+
+      <ul class="apply__trust">
+        <li>Free to apply, no fees, ever</li>
+        <li>Response within 48 hours</li>
+        <li>Backed by IIT Madras &amp; 7 incubated startups</li>
+      </ul>
+    </div>
+
+    <form class="apply__form reveal" id="applyForm" novalidate>
+      <div class="apply__field" data-field="name">
+        <label for="fName">Full name</label>
+        <input type="text" id="fName" name="name" required autocomplete="name" placeholder="Your name">
+        <span class="apply__field-error">Enter your full name</span>
+      </div>
+      <div class="apply__field" data-field="email">
+        <label for="fEmail">Email</label>
+        <input type="email" id="fEmail" name="email" required autocomplete="email" placeholder="you@email.com">
+        <span class="apply__field-error">Enter a valid email address</span>
+      </div>
+      <div class="apply__field" data-field="phone">
+        <label for="fPhone">Phone</label>
+        <input type="tel" id="fPhone" name="phone" required autocomplete="tel" placeholder="+91 00000 00000">
+        <span class="apply__field-error">Enter a valid phone number</span>
+      </div>
+      <div class="apply__field" data-field="goal">
+        <label for="fGoal">I&apos;m most interested in</label>
+        <select id="fGoal" name="goal" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="startup">Launching a startup</option>
+          <option value="job">Getting hired in AI</option>
+          <option value="explore">Still exploring</option>
+        </select>
+        <span class="apply__field-error">Pick an option</span>
+      </div>
+
+      <button type="submit" class="btn btn--primary btn--lg apply__submit">
+        <span class="apply__submit-label">Submit Application</span>
+      </button>
+      <p class="apply__form-note" id="applyNote" role="status" aria-live="polite"></p>
+
+      <div class="apply__success" role="status">
+        <span class="apply__success-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 12.5L9.5 18L20 6" stroke="#2FC28C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>You&apos;re on the list</h3>
+        <p>We've got your application for Cohort &apos;26. Expect an email from the Trafy team within 48 hours.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="section-inner footer__grid">
+    <div class="footer__brand">
+      <a href="#hero" class="nav__logo footer__logo">
+        <span class="nav__logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12.5L10 17.5L19 6.5" stroke="url(#footGrad)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="footGrad" x1="5" y1="6.5" x2="19" y2="17.5" gradientUnits="userSpaceOnUse"><stop stop-color="#8B7CFF"/><stop offset="1" stop-color="#4F8CFF"/></linearGradient></defs></svg>
+        </span>
+        <img src="assets/img/trafy-logo.png" alt="Trafy" class="nav__logo-img">
+      </a>
+      <p class="footer__tag">LEARN. BUILD. LAUNCH.<br>A community for Founders, Builders &amp; Future Ready Minds.</p>
+    </div>
+
+    <nav class="footer__col" aria-label="Program">
+      <h4>Program</h4>
+      <a href="#next-cohort">Next Cohort</a>
+      <a href="#timeline">Program Timeline</a>
+      <a href="#practice">Startup Funding</a>
+      <a href="#why-trafy">Why Trafy</a>
+    </nav>
+
+    <nav class="footer__col" aria-label="Company">
+      <h4>Company</h4>
+      <a href="#success">Success Stories</a>
+      <a href="blog.html">News &amp; Blog</a>
+      <a href="#iit-madras">IIT Madras Program</a>
+      <a href="#apply">Apply</a>
+    </nav>
+
+    <nav class="footer__col" aria-label="Connect">
+      <h4>Connect</h4>
+      <a href="#">trafy.ai</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+    </nav>
+  </div>
+
+  <div class="section-inner footer__bottom">
+    <span>© 2026 Trafy. All rights reserved.</span>
+    <div class="footer__legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/alumni-circular.js"></script>
+<script type="module" src="js/molten-metal-init.js"></script>
+</body>
+</html>
