@@ -133,7 +133,7 @@ def build():
                             ParagraphStyle("s", parent=styles["cover_sub"], textColor=colors.HexColor("#B9B6D6"))))
     story.append(Spacer(1, 26))
     meta_rows = [
-        ["FORMAT", "Hybrid — in-person sprints\n+ online build weeks"],
+        ["FORMAT", "Fully online, live build weeks"],
         ["DURATION", "6 months, full immersion"],
         ["ELIGIBILITY", "Students, early founders\n& career-switchers"],
         ["CREDENTIAL", "AICTE-approved diploma,\ncertified with IIT Madras"],
